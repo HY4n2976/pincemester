@@ -1,4 +1,6 @@
 :root{
+    --primary-color: #F7F7F7;
+    --secondary-color: #717171;
     --btn1-color: #8E1A22;
     --btn2-color: #51CCD1;
     --btn3-color: #202A4E;
@@ -7,21 +9,29 @@
     --sec-font-color: #0000;
     --btn-font: bold 1rem "Lato" , sans-serif;
 }
-
+header{
+    background-color: var(--secondary-color);
+}
 .btn-style-1{
     background-color: var(--btn1-color);
     color: var(--btn-font);
     font: var(--btn-font);
+    border: none;
+    border-radius: 30px;
 }
 .btn-style-2{
     background-color: var(--btn2-color);
     color: var(--btn-font);
     font: var(--btn-font);
+    border: none;
+    border-radius: 30px;
 }
 .btn-style-3{
     background-color: var(--btn3-color);
     color: var(--btn-font);
     font: var(--btn-font);
+    border: none;
+    border-radius: 30px;
 }
 .btn-style-4{
     background-color: var(--btn4-color);
