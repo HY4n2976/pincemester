@@ -1,0 +1,31 @@
+:root{
+    --btn1-color: #8E1A22;
+    --btn2-color: #51CCD1;
+    --btn3-color: #202A4E;
+    --btn4-color: #D9D9D9;
+    --font-color: #ffff;
+    --sec-font-color: #0000;
+    --btn-font: bold 1rem "Lato" , sans-serif;
+}
+
+.btn-style-1{
+    background-color: var(--btn1-color);
+    color: var(--btn-font);
+    font: var(--btn-font);
+}
+.btn-style-2{
+    background-color: var(--btn2-color);
+    color: var(--btn-font);
+    font: var(--btn-font);
+}
+.btn-style-3{
+    background-color: var(--btn3-color);
+    color: var(--btn-font);
+    font: var(--btn-font);
+}
+.btn-style-4{
+    background-color: var(--btn4-color);
+}
+.btn-style-4:hover{
+    background-color: var(--btn4-color);
+}
