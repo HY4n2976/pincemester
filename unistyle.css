@@ -5,37 +5,58 @@
     --btn2-color: #51CCD1;
     --btn3-color: #202A4E;
     --btn4-color: #D9D9D9;
+    --btn-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+    --btn-width: 20vw;
+    --btn-height: 3vw;
     --font-color: #ffff;
     --sec-font-color: #0000;
     --btn-font: bold 1rem "Lato" , sans-serif;
 }
-header{
-    background-color: var(--secondary-color);
-}
+
 .btn-style-1{
     background-color: var(--btn1-color);
     color: var(--btn-font);
     font: var(--btn-font);
+    box-shadow: var(--btn-shadow);
     border: none;
     border-radius: 30px;
+    width: var(--btn-width);
+    height: var(--btn-height);
 }
 .btn-style-2{
     background-color: var(--btn2-color);
     color: var(--btn-font);
     font: var(--btn-font);
+    box-shadow: var(--btn-shadow);
     border: none;
     border-radius: 30px;
+    width: var(--btn-width);
+    height: var(--btn-height);
 }
 .btn-style-3{
     background-color: var(--btn3-color);
     color: var(--btn-font);
     font: var(--btn-font);
+    box-shadow: var(--btn-shadow);
     border: none;
     border-radius: 30px;
+    width: var(--btn-width);
+    height: var(--btn-height);
 }
 .btn-style-4{
     background-color: var(--btn4-color);
+    box-shadow: var(--btn-shadow);
+    border: none;
+    border-radius: 25px;
 }
-.btn-style-4:hover{
-    background-color: var(--btn4-color);
+.question_numb{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: white;
+    border-radius: 30px;
+    border: 1pt solid black;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    width: 15vw;
+    height: 5vh;
 }
