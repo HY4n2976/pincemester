@@ -5,9 +5,9 @@
     --btn2-color: #51CCD1;
     --btn3-color: #202A4E;
     --btn4-color: #D9D9D9;
-    --btn-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+    --btn-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;;
     --btn-width: 20vw;
-    --btn-height: 3vw;
+    --btn-height: 3.5vw;
     --font-color: #ffff;
     --sec-font-color: #0000;
     --btn-font: bold 1rem "Lato" , sans-serif;
@@ -45,9 +45,16 @@
 }
 .btn-style-4{
     background-color: var(--btn4-color);
+    background-image: url(icon-pack/arrow.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 70px;
+    background-clip: content-box;
     box-shadow: var(--btn-shadow);
     border: none;
-    border-radius: 25px;
+    border-radius: 15px;
+    width: 10vw;
+    height: 5vh;
 }
 .question_numb{
     display: flex;
