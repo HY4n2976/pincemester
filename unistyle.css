@@ -1,6 +1,4 @@
 :root{
-    --primary-color: #F7F7F7;
-    --secondary-color: #717171;
     --btn1-color: #8E1A22;
     --btn2-color: #51CCD1;
     --btn3-color: #202A4E;
@@ -8,6 +6,8 @@
     --btn-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;;
     --btn-width: 20vw;
     --btn-height: 3.5vw;
+    --btn-width-mobile: 70vw;
+    --btn-height-mobile: 13vw;
     --font-color: #ffff;
     --sec-font-color: #0000;
     --btn-font: bold 1rem "Lato" , sans-serif;
@@ -15,33 +15,42 @@
 
 .btn-style-1{
     background-color: var(--btn1-color);
-    color: var(--btn-font);
+    color: var(--font-color);
     font: var(--btn-font);
     box-shadow: var(--btn-shadow);
     border: none;
     border-radius: 30px;
     width: var(--btn-width);
     height: var(--btn-height);
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 .btn-style-2{
     background-color: var(--btn2-color);
-    color: var(--btn-font);
+    color: var(--font-color);
     font: var(--btn-font);
     box-shadow: var(--btn-shadow);
     border: none;
     border-radius: 30px;
     width: var(--btn-width);
     height: var(--btn-height);
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 .btn-style-3{
     background-color: var(--btn3-color);
-    color: var(--btn-font);
+    color: var(--font-color);
     font: var(--btn-font);
     box-shadow: var(--btn-shadow);
     border: none;
     border-radius: 30px;
     width: var(--btn-width);
     height: var(--btn-height);
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 .btn-style-4{
     background-color: var(--btn4-color);
@@ -56,14 +65,29 @@
     width: 10vw;
     height: 5vh;
 }
+.btn-hover:active{
+    border: 5px solid black;
+}
+
 .question_numb{
     display: flex;
     align-items: center;
     justify-content: center;
     background-color: white;
     border-radius: 30px;
-    border: 1pt solid black;
+    border: 1px solid rgba(0, 0, 0, 0.6);
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
     width: 15vw;
     height: 5vh;
+    font-weight: 700;
+}
+
+
+
+@media only screen and (max-width: 400px){
+    .btn-style-1 {width: var(--btn-width-mobile); height: var(--btn-height-mobile);}
+    .btn-style-2 {width: var(--btn-width-mobile); height: var(--btn-height-mobile);}
+    .btn-style-3 {width: var(--btn-width-mobile); height: var(--btn-height-mobile);}
+    .btn-style-4 { width: 30vw;}
+    .question_numb { width: 50vw;}
 }

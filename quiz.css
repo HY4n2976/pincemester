@@ -8,9 +8,13 @@
     --secondary-color: #717171;
 }
 body{
+    display: flex;
+    flex-direction: column;
     min-width: 100vw;
     min-height: 100vh;
     background-color: var(--primary-color);
+    font-family: "Lato", sans-serif;
+    font-weight: 300;
 }
 header{
     background-color: var(--secondary-color);
@@ -42,6 +46,7 @@ header{
     display: flex;
     flex-direction: column;
     max-width: 20vw;
+    font-weight: 700;
 }
 .question_content img{
     max-width: 80px;
@@ -51,4 +56,12 @@ header{
 .question_content p{
     text-align: center;
     
+}
+
+
+@media only screen and (max-width: 400px){
+    body{justify-content: center;}
+    header { height: 3vh; position: absolute; top: 0;}
+    .content_btn {flex-direction: column;}
+    .question_content{max-width: 60vw;}
 }
