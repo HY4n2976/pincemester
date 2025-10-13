@@ -65,8 +65,8 @@
     width: 10vw;
     height: 5vh;
 }
-.btn-hover:active{
-    border: 5px solid black;
+.btn-effect:hover{
+    cursor: pointer;
 }
 
 .question_numb{
