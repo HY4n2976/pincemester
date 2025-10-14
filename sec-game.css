@@ -1,0 +1,21 @@
+body{ 
+    background: 
+    radial-gradient(circle at 20% 30%, rgb(72, 0, 0), transparent 60%),
+    linear-gradient(to bottom, #270000 0%, #7b0f0f 40%, #890000 70%, #5b0000 100%);
+}
+header{
+    background-color: var(--primary-color);
+}
+.speck {
+    position:absolute; width:40px; height:40px;
+    background: radial-gradient(circle at 30% 30%, rgba(255,255,255,0.4), rgba(255,255,255,0.0) 50%), rgba(0,0,0,0.15);
+    border-radius:50%; box-shadow: inset -6px -6px 12px rgba(0,0,0,0.2);
+    transform-origin:center; cursor:pointer;
+    touch-action:none;
+  }
+.pop { transform:scale(0); transition: transform 180ms ease-out, opacity 180ms; opacity:0; }
+
+.PlayingField{
+    flex:1;
+    position:relative;
+}
