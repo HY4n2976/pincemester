@@ -1,16 +1,29 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 :root{
+    --primary-color: #F7F7F7;
+    --secondary-color: #717171;
     --btn1-color: #8E1A22;
     --btn2-color: #51CCD1;
     --btn3-color: #202A4E;
     --btn4-color: #D9D9D9;
     --btn-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;;
     --btn-width: 20vw;
-    --btn-height: 3.5vw;
+    --btn-height: 7vh;
     --btn-width-mobile: 70vw;
-    --btn-height-mobile: 13vw;
+    --btn-height-mobile: 6vh;
     --font-color: #ffff;
     --sec-font-color: #0000;
     --btn-font: bold 1rem "Lato" , sans-serif;
+}
+header{
+    background-color: var(--secondary-color);
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    min-width: 100vw;
+    height: 15vh;
 }
 
 .btn-style-1{
@@ -68,6 +81,15 @@
 .btn-effect:hover{
     cursor: pointer;
 }
+.btn-effect:active{
+    border: 3px solid goldenrod;
+}
+
+.content{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
 
 .question_numb{
     display: flex;
@@ -80,6 +102,7 @@
     width: 15vw;
     height: 5vh;
     font-weight: 700;
+    font-family: "Lato", sans-serif;
 }
 
 
