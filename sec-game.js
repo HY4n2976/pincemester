@@ -66,7 +66,7 @@ function spawnSpeck() {
 
   setTimeout(() => {
     if (!s.classList.contains('pop')) s.remove();
-  }, 1500);
+  }, 1000);
 }
 
 function endGame() {
@@ -74,12 +74,18 @@ function endGame() {
   clearInterval(spawner);
   clearInterval(timer);
   questDissapearContainer.style.display = 'flex';
-  questDissContBtn.innerHTML = `<button type="button" class="btn-style-4 btn-effect btn-style-4_succsess"></button>`
+  questDissContBtn.innerHTML = `<button type=" button" class="target_btn btn-style-4 btn-effect btn-style-4_succsess"></button>`
   questDissContBtn.innerHTML += `<button type="button" class="btn-style-4 btn-effect btn-style-4_reload" onclick="restart()"></button>`
   result.textContent = `Lejárt az idő! Pontszámod: ${score}`;
+
+  let fw = questDissContBtn.querySelector(".target_btn");
+  fw.addEventListener("click", () => {
+    window.location.href = "quiz.html";
+  });
+
 }
+
 
 function restart() {
   location.reload();
 }
-

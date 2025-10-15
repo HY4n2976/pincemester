@@ -6,6 +6,7 @@ body{
 header{
     background-color: var(--secondary-color);
     font: var(--btn-font);
+    color: var(--font-color);
     position: fixed;
     display: flex;
     justify-content: center;

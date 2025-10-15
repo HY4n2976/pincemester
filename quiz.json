@@ -1,0 +1,26 @@
+[
+  {
+    "id": 1,
+    "kerdes": "A borhoz derítőanyag kell keverni, de vajon mit?",
+    "valaszok": ["Mész", "Bentonit", "Cukor"],
+    "helyes": [1],
+    "magyarazat": "Így van: a bentonit megköti a szennyeződéseket, így a bor kristálytiszta lesz!"
+  },
+  {
+    "id": 2,
+    "kerdes": "A bort meg kell óvni a megromlástól, de vajon milyen anyagot tegyünk bele?",
+    "valaszok": ["Kén", "Ecet", "Foszfor"],
+    "helyes": [0],
+    "magyarazat": "Így van: a kén megóvja a bort a romlástól!"
+  },
+  {
+    "id": 3,
+    "kerdes": "A bort tárolni is kell. Válaszd ki, mibe szeretnéd:",
+    "valaszok": ["Acéltartály", "Fahordó"],
+    "helyes": [0, 1],
+    "magyarazat": {
+      "0": "Rendben! Acéltartályban frissebb bor születik!",
+      "1": "Rendben! Fahordóban gazdagabb ízek alakulnak ki!"
+    }
+  }
+]
