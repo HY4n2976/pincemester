@@ -4,21 +4,21 @@
     box-sizing: border-box;
 }
 :root{
-    --primary-color: #F7F7F7;
-    --secondary-color: #717171;
+    --primary-color: #D9D9D9;
+    --secondary-color: #F7F7F7;
     --btn1-color: #8E1A22;
     --btn2-color: #51CCD1;
     --btn3-color: #202A4E;
     --btn4-color: #D9D9D9;
     --btn-reload: #ac000b;
-    --btn-succsess: #14CB00;
-    --btn-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;;
+    --font-succsess: #008407;
+    --btn-shadow: rgba(0, 0, 0, 0.25) 0px 2px 5px;;
     --btn-width: 20vw;
     --btn-height: 7vh;
     --btn-width-mobile: 70vw;
     --btn-height-mobile: 6vh;
     --font-color: #ffff;
-    --sec-font-color: #0000;
+    --sec-font-color: black;
     --btn-font: bold 1rem "Lato" , sans-serif;
 }
 body{
@@ -29,4 +29,135 @@ body{
     background-color: var(--primary-color);
     font-family: "Lato", sans-serif;
     font-weight: 300;
+}
+header{
+    background-color: var(--secondary-color);
+    color: var(--sec-font-color);
+    font: var(--btn-font);
+    width: 100vw;
+    height: 15vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    gap: 2rem;
+}
+header img{
+    width: 90px;
+}
+main{
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    gap: 2rem;
+    padding-top: 1rem;
+    height: 70vh;
+}
+
+.LinkDiv{
+    background-color: var(--btn3-color);
+    color: var(--font-color);
+    font: var(--btn-font);
+    width: 100vw;
+    height: 5vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.LinkDiv a{
+    text-decoration: none;
+    color: var(--font-color);
+}
+.nav{
+    background-color: var(--secondary-color);
+    color: var(--sec-font-color);
+    font: var(--btn-font);
+    width: 100vw;
+    height: 6vh;
+    display: flex;
+    border: 1px solid rgba(0, 0, 0, 0.5);
+    box-shadow: var(--btn-shadow);
+}
+
+#bal{
+    display: flex;
+    flex-direction: column;
+    background-color: var(--secondary-color);
+    width: 50vw;
+    border: 1px solid rgba(0, 0, 0, 0.3);
+    border-radius: 5px;
+}
+#bal_header{
+    width: 100%;
+    box-shadow: var(--btn-shadow);
+    height: 6vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--font-succsess);
+}
+#bal p{
+    margin-left: 1.5rem;
+    font-weight: 400;
+}
+#bal h2{
+    margin: 1rem;
+    color: var(--font-succsess);
+}
+#jobb{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+    background-color: var(--secondary-color);
+    width: 30vw;
+    padding: 1rem;
+    border: 1px solid rgba(0, 0, 0, 0.3);
+    border-radius: 5px;
+    text-align: center;
+}
+#jobb img{
+    width: 250px;
+    border-radius: 5px;
+}
+
+#jobb main{
+    min-width: 20vw;
+}
+.StartButtonIndex{
+    background-color: var(--btn1-color);
+    color: var(--font-color);
+    font: var(--btn-font);
+    box-shadow: var(--btn-shadow);
+    border: none;
+    border-radius: 30px;
+    width: var(--btn-width);
+    height: var(--btn-height);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+}
+.StartButtonIndex:hover{
+    cursor: pointer;
+    opacity: 0.9;
+}
+
+@media only screen and (max-width: 400px){
+    main{
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    #bal{
+        display: none;
+    }
+    #jobb{
+        width: 80vw;
+    }
+    .btn-style-1 {width: var(--btn-width-mobile); height: var(--btn-height-mobile);}
+    .LinkDiv{
+        font-size: 13px;
+    }
 }

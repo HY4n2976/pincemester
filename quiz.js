@@ -1,7 +1,7 @@
 let kerdesek = [];
 let aktualis = 0;
 let question_numb= document.querySelector('.question_numb') 
-// Betöltés JSON-ból
+
 fetch('quiz.json')
   .then(res => res.json())
   .then(data => {
@@ -12,13 +12,12 @@ fetch('quiz.json')
 function megjelenitKerdes() {
   const k = kerdesek[aktualis];
 
-  // Kérdés szám
+
   document.querySelector('.question_numb').innerHTML = `<p>${k.id}. kérdés</p>`;
 
-  // Kérdés szöveg
   document.querySelector('.question_content div:first-child').innerHTML = `<p>${k.kerdes}</p>`;
 
-  // Válaszgombok
+
   const valaszok = document.querySelectorAll('.content_btn button');
   valaszok.forEach((gomb, index) => {
     if (k.valaszok[index]) {
@@ -27,11 +26,10 @@ function megjelenitKerdes() {
       gomb.classList.remove('disabled');
       gomb.onclick = () => ellenorizValasz(index);
     } else {
-      gomb.style.display = 'none'; // ha pl. csak 2 válasz van
+      gomb.style.display = 'none';
     }
   });
 
-  // Tovább gomb elrejtése
   document.querySelector('.btn-style-4').style.display = 'none';
   question_numb.style.background = "var(--primary-color)"
 }

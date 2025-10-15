@@ -1,7 +1,7 @@
 [
   {
     "id": 1,
-    "kerdes": "A borhoz derítőanyag kell keverni, de vajon mit?",
+    "kerdes": "A borhoz derítőanyagot kell keverni, de vajon mit?",
     "valaszok": ["Mész", "Bentonit", "Cukor"],
     "helyes": [1],
     "magyarazat": "Így van: a bentonit megköti a szennyeződéseket, így a bor kristálytiszta lesz!"
