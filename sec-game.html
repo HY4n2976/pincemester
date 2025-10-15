@@ -6,28 +6,31 @@
     <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="unistyle.css">
     <link rel="stylesheet" href="sec-game.css">
-    
     <title>Tisztítás</title>
 </head>
 <body>
-    <div class="QuestDissapearContainer">
+    <header>
+        <p>Hátralevő idő: <span id="time"></span></p>
+        <p>Pontszám: <span id="score"></span></p>
+    </header>
+    <div id="playingField">
+        <div id="questDissapearContainer">
         <div class="question_numb">
             <p>1. kérdés</p>
         </div>
         <main class="question_content">
             <div>
-                <p>Dolorem dignissimos est nesciunt placeat laudantium?</p>
+                <p id="result">Dolorem dignissimos est nesciunt placeat laudantium?</p>
             </div>
             <div>
                 <img src="icon-pack/wine.png" alt="">
             </div>
         </main>
-        <div>
-            <button type="button" class="btn-style-4"></button>
+        <div id="questDissContBtn">
+            <!-- <button type="button" class="btn-style-4 btn-effect" id="startButton"></button> -->
         </div>
     </div>
-    <header></header>
-    <div class="PlayingField">
+
 
     </div>
     <script src="sec-game.js"></script>

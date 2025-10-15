@@ -10,6 +10,8 @@
     --btn2-color: #51CCD1;
     --btn3-color: #202A4E;
     --btn4-color: #D9D9D9;
+    --btn-reload: #ac000b;
+    --btn-succsess: #14CB00;
     --btn-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;;
     --btn-width: 20vw;
     --btn-height: 7vh;
@@ -87,7 +89,18 @@ header{
     border: none;
     border-radius: 15px;
     width: 10vw;
-    height: 5vh;
+    height: 6vh;
+}
+.btn-style-4_reload{
+    background-color: var(--btn-reload);
+    background-image: url(icon-pack/reload.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-clip: content-box;
+    background-size: 50px;
+}
+.btn-style-4_succsess{
+    background-color: var(--btn-succsess);
 }
 .btn-effect:hover{
     cursor: pointer;
@@ -95,8 +108,11 @@ header{
 .btn-effect:active{
     border: 3px solid goldenrod;
 }
-
-.QuestDissapearContainer{
+.btn-effect:disabled
+{
+    opacity: 0.5;
+}
+#questDissapearContainer{
     position: absolute;
     top: 50%;
     left: 50%;
@@ -111,10 +127,12 @@ header{
     background-color: var(--primary-color);
     gap: 6rem;
     box-shadow: var(--btn-shadow);
-    visibility: visible;
-    display: none;
 }
-
+#questDissContBtn{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
 .content{
     display: flex;
     flex-direction: column;
@@ -160,4 +178,9 @@ header{
     .btn-style-3 {width: var(--btn-width-mobile); height: var(--btn-height-mobile);}
     .btn-style-4 { width: 30vw;}
     .question_numb { width: 50vw;}
+    #questDissapearContainer{
+        width: 70vw;
+        height: 60vh;
+        gap: 3rem;
+    }
 }
