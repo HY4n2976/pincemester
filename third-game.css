@@ -1,0 +1,18 @@
+.conatiner{
+    background-color: var(--secondary-color);
+    
+}
+
+.contentBgImg{
+    background-image: url(icon-pack/conveyor_belt.png);
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+
+}
+
+.icons {
+    margin: 0;
+    padding: 0;
+    width: 150px;
+}
