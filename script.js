@@ -1,42 +1,52 @@
-const draggables = document.querySelectorAll(`.draggable`)
-const containers = document.querySelectorAll(`.container`)
+const draggables = document.querySelectorAll('.draggable');
+const container = document.querySelector('.container');
+const taskDescription = document.getElementById('task-description');
+const restartBtn = document.getElementById('restart-btn');
+
+let step = 0;
 
 draggables.forEach(draggable => {
-    draggable.addEventListener(`dragstart`, () => {
-        draggable.classList.add(`dragging`)
-    })
+    draggable.addEventListener('dragstart', () => {
+        draggable.classList.add('dragging');
+    });
 
-    draggable.addEventListener(`dragged`, () => {
-        draggable.classList.remove(`dragging`)
-    })
-})
+    draggable.addEventListener('dragend', () => {
+        draggable.classList.remove('dragging');
+    });
+});
 
-containers.forEach(container => {
-    container.addEventListener(`dragover`, e => {
-        e.preventDefault()
-        const afterElement = getDragAfterElement(container, e.clientY)
-        const draggable = document.querySelector(`.dragging`)
-        if (afterElement == null) {
-            container.appendChild(draggable)
-        }
-        else {
-            container.insertBefore(draggable, afterElement)
-        }
-    })
-})
+container.addEventListener('dragover', e => {
+    e.preventDefault();
+});
 
-function getDragAfterElement(container, y) {
-    const draggableElements = [...container.querySelectorAll(`.draggable:not(.dragging)`)]
+container.addEventListener('drop', e => {
+    e.preventDefault();
+    const draggedElement = document.querySelector('.dragging');
+    if (!draggedElement) return;
 
-    return draggableElements.reduce((closest, child) => {
-        const box = child.getBoundingClientRect()
-        const offset = y - box.top - box.height / 2
-        console.log(offset)
-        if (0 > offset && offset > closest.offset) {
-            return {offset: offset, element: child} }
-            else {
-                return closest
-            }
-        
-    }, {offset: Number.NEGATIVE_INFINITY}).element
-}
+    const draggedId = draggedElement.id;
+
+    if (step === 0 && draggedId === 'bottle-without-cap') {
+        container.innerHTML = '<img class="conveyor-img" src="icon-pack/third-game-pics/conveyor_belt.png" alt="Futószalag"><img class="bottle-on-belt" src="icon-pack/third-game-pics/bottle-without cap.png" alt="Üres palack">';
+        draggedElement.style.display = 'none';
+        step = 1;
+    } else if (step === 1 && draggedId === 'cap') {
+        container.innerHTML = '<img class="conveyor-img" src="icon-pack/third-game-pics/conveyor_belt.png" alt="Futószalag"><img class="bottle-on-belt" src="icon-pack/third-game-pics/cap-bottle.png" alt="Palack kupakkal">';
+        draggedElement.style.display = 'none';
+        step = 2;
+    } else if (step === 2 && draggedId === 'tag') {
+        container.innerHTML = '<img class="conveyor-img" src="icon-pack/third-game-pics/conveyor_belt.png" alt="Futószalag"><img class="bottle-on-belt" src="icon-pack/third-game-pics/full-bottle.png" alt="Teljes palack">';
+        draggedElement.style.display = 'none';
+        step = 3;
+        taskDescription.textContent = 'Gratulálunk, a borod palackba került!';
+    }
+});
+
+restartBtn.addEventListener('click', () => {
+    step = 0;
+    container.innerHTML = '<img class="conveyor-img" src="icon-pack/third-game-pics/conveyor_belt.png" alt="Futószalag">';
+    taskDescription.textContent = 'Húzd fel a palackot, majd a kupakot és a címkét a futószalagra!';
+    document.getElementById('bottle-without-cap').style.display = 'inline-block';
+    document.getElementById('cap').style.display = 'inline-block';
+    document.getElementById('tag').style.display = 'inline-block';
+});

@@ -1,18 +1,106 @@
-.conatiner{
-    background-color: var(--secondary-color);
-    
+.container{
+    position: relative;
+    width: 100%;
+    max-width: 600px;
+    margin: 0 auto;
+    border: 2px solid #000; 
 }
 
-.contentBgImg{
-    background-image: url(icon-pack/conveyor_belt.png);
-    background-size: contain;
-    background-position: center;
-    background-repeat: no-repeat;
+.conveyor-img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
 
+.bottle-on-belt {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 80px;
+    height: auto;
+}
+
+.draggable {
+    cursor: grab;
+    margin: 10px;
+    display: inline-block;
+}
+
+.draggable.dragging {
+    opacity: 0.5;
+}
+
+.message {
+    display: none;
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    background: white;
+    padding: 10px;
+    border: 1px solid black;
+    font-size: 18px;
+    font-weight: bold;
+    z-index: 10;
 }
 
 .icons {
     margin: 0;
     padding: 0;
-    width: 150px;
+    width: 100px;
+}
+
+#restart-btn {
+    margin-top: 20px;
+    padding: 5px 10px;
+    font-size: 12px;
+    cursor: pointer;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 20px;
+}
+
+#restart-btn:hover {
+    background-color: #0056b3;
+}
+
+@media (max-width: 768px) {
+    .container {
+        min-height: 150px;
+    }
+    .bottle-on-belt {
+        width: 60px;
+    }
+    .icons {
+        width: 80px;
+    }
+    .message {
+        font-size: 14px;
+        padding: 5px;
+    }
+    #restart-btn {
+        font-size: 14px;
+        padding: 8px 16px;
+    }
+}
+
+@media (max-width: 480px) {
+    .container {
+        min-height: 120px;
+    }
+    .bottle-on-belt {
+        width: 50px;
+    }
+    .icons {
+        width: 60px;
+    }
+    .message {
+        font-size: 12px;
+        padding: 3px;
+    }
+    #restart-btn {
+        font-size: 12px;
+        padding: 6px 12px;
+    }
 }

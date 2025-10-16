@@ -15,26 +15,31 @@
     
     <main class="content">
         <div class="question_numb">
-            <p>3. Feladat</p>
+            <p>3. feladat</p>
         </div>
         <div class="question_content">
-            <p></p>
+            <p id="task-description">Húzd fel a palackot, majd a kupakot és a címkét a futószalagra!</p>
         </div>
         <div class="contentBgImg">
             <div class="container">
-                
+                <img class="conveyor-img" src="icon-pack/third-game-pics/conveyor_belt.png" alt="Futószalag">
             </div>
         </div>
     </main>
 
-    <div>
-        <div class="draggable">
-            <img class="icons" src="icon-pack/bottle.png" alt="">
+    <div class="draggable-items">
+        <div class="draggable" id="bottle-without-cap" draggable="true">
+            <img class="icons" src="icon-pack/third-game-pics/bottle-without cap.png" alt="Üres palack">
         </div>
-        <div class="draggable">
-            <img src="" alt="">
+        <div class="draggable" id="cap" draggable="true">
+            <img class="icons" src="icon-pack/third-game-pics/cap.png" alt="Kupak">
+        </div>
+        <div class="draggable" id="tag" draggable="true">
+            <img class="icons" src="icon-pack/third-game-pics/tag.png" alt="Címke">
         </div>
     </div>
+
+    <button id="restart-btn">Újra</button>
     <script src="script.js"></script>
 </body>
 </html>
