@@ -2,6 +2,7 @@ const draggables = document.querySelectorAll('.draggable');
 const container = document.querySelector('.container');
 const taskDescription = document.getElementById('task-description');
 const restartBtn = document.getElementById('restart-btn');
+const btnHolder = document.querySelector('.btnHolder') 
 
 let step = 0;
 
@@ -39,6 +40,7 @@ container.addEventListener('drop', e => {
         draggedElement.style.display = 'none';
         step = 3;
         taskDescription.textContent = 'Gratulálunk, a borod palackba került!';
+        btnHolder.innerHTML += `<a href="http://" class="btn-style-4 btn-effect" ></a>`
     }
 });
 

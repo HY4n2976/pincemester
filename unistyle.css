@@ -197,4 +197,22 @@ header{
     .question_content{
         max-width: 40vw;
     }
+     body
+    {
+        justify-content: center;
+    }
+    header
+    {
+        height: 3vh; position: absolute; top: 0;
+    }
+    .content{
+        gap: 2rem;
+    }
+    .content_btn {
+        flex-direction: column;
+        padding-top: 10%;
+        padding-bottom: 10%;
+        gap: 1rem;
+    } 
+    .question_content{max-width: 60vw; gap: 1rem;}
 }
