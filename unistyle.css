@@ -181,9 +181,14 @@ header{
 .question_content p{
     text-align: center;  
 }
+canvas {
+    max-width: 95vw;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.25);
+  }
 
-
-@media only screen and (max-width: 400px){
+@media only screen and (max-width: 480px){
     .btn-style-1 {width: var(--btn-width-mobile); height: var(--btn-height-mobile);}
     .btn-style-2 {width: var(--btn-width-mobile); height: var(--btn-height-mobile);}
     .btn-style-3 {width: var(--btn-width-mobile); height: var(--btn-height-mobile);}
